@@ -68,5 +68,18 @@ contract('Collectible', function (accounts) {
         
         assert.equal(price, 0);
     });
+    
+    it('buy collectible', async function () {
+        await this.collectible.sell(42, 2000);
+        await this.collectible.buy(42, { from: alice, value: 3000 });
+        
+        const price = await this.collectible.prices(42);
+        
+        assert.equal(price, 3000 * 2);
+
+        const owner = await this.collectible.ownerOf(42);
+        
+        assert.equal(owner, alice);
+    });
 });
 

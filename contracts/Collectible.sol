@@ -44,6 +44,18 @@ contract Collectible {
         return true;
     }
     
+    function buy(uint tokenId_) public payable returns (bool) {
+        require(prices[tokenId_] <= msg.value);
+        
+        address originalOwner = owners[tokenId_];
+        
+        owners[tokenId_] = msg.sender;
+        prices[tokenId_] = 2 * msg.value;
+        originalOwner.transfer(msg.value);
+    
+        return true;
+    }
+    
     function acquire(uint tokenId_) public returns (bool) {
         require(isFree(tokenId_));
         

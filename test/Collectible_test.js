@@ -81,5 +81,18 @@ contract('Collectible', function (accounts) {
         
         assert.equal(owner, alice);
     });
+    
+    it('cannot buy collectible using low value', async function () {
+        await this.collectible.sell(42, 2000);
+        expectThrow(this.collectible.buy(42, { from: alice, value: 1000 }));
+        
+        const price = await this.collectible.prices(42);
+        
+        assert.equal(price, 2000);
+
+        const owner = await this.collectible.ownerOf(42);
+        
+        assert.equal(owner, creator);
+    });
 });
 

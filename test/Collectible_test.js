@@ -29,6 +29,12 @@ contract('Collectible', function (accounts) {
         assert.equal(owner, creator);
     });
     
+    it('free collectible', async function () {
+        const price = await this.collectible.prices(42);
+        
+        assert.equal(price, 0);
+    });
+    
     it('acquire free collectible', async function () {
         await this.collectible.acquire(42, { from: alice });
         
@@ -37,10 +43,14 @@ contract('Collectible', function (accounts) {
         assert.equal(owner, alice);
     });
     
-    it('free collectible', async function () {
-        const price = await this.collectible.prices(42);
+    it('cannot acquire non-free collectible', async function () {
+        await this.collectible.sell(42, 1000);
         
-        assert.equal(price, 0);
+        expectThrow(this.collectible.acquire(42, { from: alice }));
+        
+        const owner = await this.collectible.ownerOf(42);
+        
+        assert.equal(owner, creator);
     });
     
     it('sell collectible', async function () {

@@ -34,6 +34,10 @@ contract Collectible {
         return ownerAddress;
     }
     
+    function isFree(uint tokenId_) public view returns (bool) {
+        return prices[tokenId_] == 0;
+    }
+    
     function sell(uint tokenId_, uint price) public onlyOwner(tokenId_) returns (bool) {
         prices[tokenId_] = price;
         
@@ -41,6 +45,8 @@ contract Collectible {
     }
     
     function acquire(uint tokenId_) public returns (bool) {
+        require(isFree(tokenId_));
+        
         owners[tokenId_] = msg.sender;
         
         return true;

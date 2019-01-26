@@ -1,24 +1,29 @@
 pragma solidity ^0.4.24;
 
 contract Collectible {
-    uint totalSupply_;
+    address public owner;
+    uint public minimumPrice;
+    
+    uint noCollectibles;
     
     mapping(uint => address) owners;
     
-    constructor(uint _totalSupply) public {
-        totalSupply_ = _totalSupply;
+    constructor(uint _totalSupply, uint _minimumPrice) public {
+        noCollectibles = _totalSupply;
+        minimumPrice = _minimumPrice;
+        owner = msg.sender;
     }
     
     function totalSupply() public view returns (uint) {
-        return totalSupply_;
+        return noCollectibles;
     }
     
     function ownerOf(uint tokenId_) public view returns (address) {
-        address owner = owners[tokenId_];
+        address ownerAddress = owners[tokenId_];
         
-        if (owner == address(0))
-            return this;
+        if (ownerAddress == address(0))
+            return owner;
         
-        return owner;
+        return ownerAddress;
     }
 }

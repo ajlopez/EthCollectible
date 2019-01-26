@@ -1,7 +1,9 @@
 pragma solidity ^0.4.24;
 
 contract Collectible {
-    function totalSupply() public pure returns (uint) {
-        return 0;
+    uint totalSupply_;
+    
+    function totalSupply() public view returns (uint) {
+        return totalSupply_;
     }
 }

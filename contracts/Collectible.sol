@@ -4,6 +4,8 @@ contract Collectible {
     address public owner;
     uint public minimumPrice;
     
+    mapping (uint => uint) public prices;
+    
     uint noCollectibles;
     
     mapping(uint => address) owners;
@@ -27,7 +29,15 @@ contract Collectible {
         return ownerAddress;
     }
     
+    function sell(uint tokenId_, uint price) public returns (bool) {
+        prices[tokenId_] = price;
+        
+        return true;
+    }
+    
     function acquire(uint tokenId_) public returns (bool) {
         owners[tokenId_] = msg.sender;
+        
+        return true;
     }
 }

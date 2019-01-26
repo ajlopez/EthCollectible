@@ -34,5 +34,19 @@ contract('Collectible', function (accounts) {
         
         assert.equal(owner, alice);
     });
+    
+    it('free collectible', async function () {
+        const price = await this.collectible.prices(42);
+        
+        assert.equal(price, 0);
+    });
+    
+    it('sell collectible', async function () {
+        await this.collectible.sell(42, 2000);
+        
+        const price = await this.collectible.prices(42);
+        
+        assert.equal(price, 2000);
+    });
 });
 

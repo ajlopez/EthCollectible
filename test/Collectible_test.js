@@ -3,6 +3,7 @@ const Collectible = artifacts.require('./Collectible.sol');
 
 contract('Collectible', function (accounts) {
     const creator = accounts[0];
+    const alice = accounts[1];
     
     beforeEach(async function () {
         this.collectible = await Collectible.new(10000, 1000);
@@ -24,6 +25,14 @@ contract('Collectible', function (accounts) {
         const owner = await this.collectible.ownerOf(42);
         
         assert.equal(owner, creator);
+    });
+    
+    it('acquire free collectible', async function () {
+        await this.collectible.acquire(42, { from: alice });
+        
+        const owner = await this.collectible.ownerOf(42);
+        
+        assert.equal(owner, alice);
     });
 });
 

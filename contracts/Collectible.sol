@@ -26,4 +26,8 @@ contract Collectible {
         
         return ownerAddress;
     }
+    
+    function acquire(uint tokenId_) public returns (bool) {
+        owners[tokenId_] = msg.sender;
+    }
 }

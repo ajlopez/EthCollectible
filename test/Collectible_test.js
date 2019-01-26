@@ -1,6 +1,8 @@
 
 const Collectible = artifacts.require('./Collectible.sol');
 
+const expectThrow = require('./utils').expectThrow;
+
 contract('Collectible', function (accounts) {
     const creator = accounts[0];
     const alice = accounts[1];
@@ -47,6 +49,14 @@ contract('Collectible', function (accounts) {
         const price = await this.collectible.prices(42);
         
         assert.equal(price, 2000);
+    });
+    
+    it('only collectible owner can sell it', async function () {
+        expectThrow(this.collectible.sell(42, 2000, { from: alice }));
+        
+        const price = await this.collectible.prices(42);
+        
+        assert.equal(price, 0);
     });
 });
 

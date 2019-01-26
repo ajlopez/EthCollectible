@@ -16,6 +16,11 @@ contract Collectible {
         owner = msg.sender;
     }
     
+    modifier onlyOwner(uint tokenId_) {
+        require(ownerOf(tokenId_) == msg.sender);
+        _;
+    }
+    
     function totalSupply() public view returns (uint) {
         return noCollectibles;
     }
@@ -29,7 +34,7 @@ contract Collectible {
         return ownerAddress;
     }
     
-    function sell(uint tokenId_, uint price) public returns (bool) {
+    function sell(uint tokenId_, uint price) public onlyOwner(tokenId_) returns (bool) {
         prices[tokenId_] = price;
         
         return true;

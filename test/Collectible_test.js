@@ -11,5 +11,11 @@ contract('Collectible', function (accounts) {
         
         assert.equal(totalSupply, 10000);
     });
+    
+    it('initial owner', async function () {
+        const owner = await this.collectible.ownerOf(42);
+        
+        assert.equal(owner, this.collectible.address);
+    });
 });
 

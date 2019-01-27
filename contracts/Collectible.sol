@@ -63,4 +63,14 @@ contract Collectible {
         
         return true;
     }
+    
+    function getPrices() public view returns (uint[] priceList) {
+        priceList = new uint[](noCollectibles);
+        
+        for (uint k = 0; k < noCollectibles; k++)
+            if (prices[k] > 0)
+                priceList[k] = prices[k];
+
+        return priceList;
+    }
 }

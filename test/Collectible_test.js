@@ -8,19 +8,19 @@ contract('Collectible', function (accounts) {
     const alice = accounts[1];
     
     beforeEach(async function () {
-        this.collectible = await Collectible.new(10000, 1000);
+        this.collectible = await Collectible.new(1000, 100);
     });
     
     it('initial supply', async function () {
         const totalSupply = await this.collectible.totalSupply();
         
-        assert.equal(totalSupply, 10000);
+        assert.equal(totalSupply, 1000);
     });
     
     it('minimum price', async function () {
         const minimumPrice = await this.collectible.minimumPrice();
         
-        assert.equal(minimumPrice, 1000);
+        assert.equal(minimumPrice, 100);
     });
     
     it('initial owner', async function () {
@@ -94,5 +94,23 @@ contract('Collectible', function (accounts) {
         
         assert.equal(owner, creator);
     });
-});
+    
+    it('get prices', async function () {
+        await this.collectible.sell(42, 2000);
+        await this.collectible.sell(1, 3000);
+        await this.collectible.sell(4, 4000);
+        await this.collectible.sell(9, 5000);
+        
+        const result = await this.collectible.getPrices({ gas: 6500000 });
+        
+        assert.ok(result);
+        assert.ok(Array.isArray(result));
+        assert.equal(result.length, 1000);
+        
+        assert.equal(result[1], 3000);
+        assert.equal(result[4], 4000);
+        assert.equal(result[9], 5000);
+        assert.equal(result[42], 2000);
+    });
+})
 

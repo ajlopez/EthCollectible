@@ -1,8 +1,18 @@
 
+const fs = require('fs');
 const rskapi = require('rskapi');
 const simpleabi = require('simpleabi');
 
 const config = require('./config');
+
+var data;
+
+try {
+    data = require('./data.json');
+}
+catch (err) {
+    data = {};
+}
 
 const Collectible = require('../build/contracts/Collectible.json');
 
@@ -39,6 +49,18 @@ async function run() {
     
     console.log('contract address', txr.contractAddress);
     console.log('gas used', parseInt(txr.gasUsed));
+    
+    if (!data.networks)
+        data.networks = {};
+    
+    if (!data.networks[network])
+        data.networks[network] = {};
+    
+    data.networks[network].contractAddress = txr.contractAddress;
+    
+    const datajson = JSON.stringify(data, null, 4);
+    
+    fs.writeFileSync('data.json', datajson);
 }
 
 run();

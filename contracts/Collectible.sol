@@ -73,4 +73,14 @@ contract Collectible {
 
         return priceList;
     }
+    
+    function getOwners() public view returns (address[] ownerList) {
+        ownerList = new address[](noCollectibles);
+        
+        for (uint k = 0; k < noCollectibles; k++)
+            if (owners[k] != address(0))
+                ownerList[k] = owners[k];
+
+        return ownerList;
+    }
 }

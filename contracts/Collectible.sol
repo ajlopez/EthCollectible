@@ -2,7 +2,7 @@ pragma solidity ^0.4.24;
 
 contract Collectible {
     address public owner;
-    uint public minimumPrice;
+    uint public defaultPrice;
     
     mapping (uint => uint) public prices;
     
@@ -10,9 +10,9 @@ contract Collectible {
     
     mapping(uint => address) owners;
     
-    constructor(uint _totalSupply, uint _minimumPrice) public {
+    constructor(uint _totalSupply, uint _defaultPrice) public {
         noCollectibles = _totalSupply;
-        minimumPrice = _minimumPrice;
+        defaultPrice = _defaultPrice;
         owner = msg.sender;
     }
     
@@ -60,6 +60,7 @@ contract Collectible {
         require(isFree(tokenId_));
         
         owners[tokenId_] = msg.sender;
+        prices[tokenId_] = defaultPrice;
         
         return true;
     }

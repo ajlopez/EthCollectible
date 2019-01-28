@@ -10,20 +10,23 @@ contract('Collectible', function (accounts) {
     const charlie = accounts[3];
     const dan = accounts[4];
     
+    const NO_COLLECTIBLES = 1000;
+    const DEFAULT_PRICE = 100;
+    
     beforeEach(async function () {
-        this.collectible = await Collectible.new(1000, 100);
+        this.collectible = await Collectible.new(NO_COLLECTIBLES, DEFAULT_PRICE);
     });
     
     it('initial supply', async function () {
         const totalSupply = await this.collectible.totalSupply();
         
-        assert.equal(totalSupply, 1000);
+        assert.equal(totalSupply, NO_COLLECTIBLES);
     });
     
     it('minimum price', async function () {
-        const minimumPrice = await this.collectible.minimumPrice();
+        const minimumPrice = await this.collectible.defaultPrice();
         
-        assert.equal(minimumPrice, 100);
+        assert.equal(minimumPrice, DEFAULT_PRICE);
     });
     
     it('initial owner', async function () {
@@ -44,6 +47,10 @@ contract('Collectible', function (accounts) {
         const owner = await this.collectible.ownerOf(42);
         
         assert.equal(owner, alice);
+        
+        const price = await this.collectible.prices(42);
+        
+        assert.equal(price, DEFAULT_PRICE);
     });
     
     it('cannot acquire non-free collectible', async function () {

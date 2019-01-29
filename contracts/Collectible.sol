@@ -16,7 +16,12 @@ contract Collectible {
         owner = msg.sender;
     }
     
-    modifier onlyOwner(uint tokenId_) {
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
+    
+    modifier onlyCollectibleOwner(uint tokenId_) {
         require(ownerOf(tokenId_) == msg.sender);
         _;
     }
@@ -25,7 +30,7 @@ contract Collectible {
         return noCollectibles;
     }
     
-    function emit(uint _quantity) public {
+    function emit(uint _quantity) public onlyOwner {
         noCollectibles += _quantity;
     }
     
@@ -42,7 +47,7 @@ contract Collectible {
         return prices[tokenId_] == 0;
     }
     
-    function sell(uint tokenId_, uint price) public onlyOwner(tokenId_) returns (bool) {
+    function sell(uint tokenId_, uint price) public onlyCollectibleOwner(tokenId_) returns (bool) {
         prices[tokenId_] = price;
         
         return true;

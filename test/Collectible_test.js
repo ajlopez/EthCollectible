@@ -142,11 +142,19 @@ contract('Collectible', function (accounts) {
     });
     
     it('emit collectibles', async function () {
-        await this.collectible.emit(1000);
+        await this.collectible.emit(1000, { from: creator });
         
         const totalSupply = await this.collectible.totalSupply();
         
         assert.equal(totalSupply, NO_COLLECTIBLES + 1000);
+    });
+    
+    it('only creator could emit collectibles', async function () {
+        expectThrow(this.collectible.emit(1000, { from: alice }));
+        
+        const totalSupply = await this.collectible.totalSupply();
+        
+        assert.equal(totalSupply, NO_COLLECTIBLES);
     });
 })
 

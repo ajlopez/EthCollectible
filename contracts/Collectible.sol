@@ -25,6 +25,10 @@ contract Collectible {
         return noCollectibles;
     }
     
+    function emit(uint _quantity) public {
+        noCollectibles += _quantity;
+    }
+    
     function ownerOf(uint tokenId_) public view returns (address) {
         address ownerAddress = owners[tokenId_];
         

@@ -140,5 +140,13 @@ contract('Collectible', function (accounts) {
         assert.equal(result[9], dan);
         assert.equal(result[42], alice);
     });
+    
+    it('emit collectibles', async function () {
+        await this.collectible.emit(1000);
+        
+        const totalSupply = await this.collectible.totalSupply();
+        
+        assert.equal(totalSupply, NO_COLLECTIBLES + 1000);
+    });
 })
 

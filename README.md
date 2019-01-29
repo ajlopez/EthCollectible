@@ -1,4 +1,4 @@
-# EthBridge
+# EthCollectible
 
 Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WIP
 

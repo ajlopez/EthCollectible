@@ -23,10 +23,19 @@ contract('Collectible', function (accounts) {
         assert.equal(totalSupply, NO_COLLECTIBLES);
     });
     
-    it('minimum price', async function () {
-        const minimumPrice = await this.collectible.defaultPrice();
+    it('default price', async function () {
+        const defaultPrice = await this.collectible.defaultPrice();
         
-        assert.equal(minimumPrice, DEFAULT_PRICE);
+        assert.equal(defaultPrice, DEFAULT_PRICE);
+    });
+    
+    
+    it('set default price', async function () {
+        await this.collectible.setDefaultPrice(200);
+        
+        const defaultPrice = await this.collectible.defaultPrice();
+        
+        assert.equal(defaultPrice, 200);
     });
     
     it('initial owner', async function () {

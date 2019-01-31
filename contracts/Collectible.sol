@@ -30,7 +30,7 @@ contract Collectible {
         return noCollectibles;
     }
     
-    function setDefaultPrice(uint _price) public {
+    function setDefaultPrice(uint _price) public onlyOwner {
         defaultPrice = _price;
     }
     

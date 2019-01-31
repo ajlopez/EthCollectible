@@ -28,14 +28,21 @@ contract('Collectible', function (accounts) {
         
         assert.equal(defaultPrice, DEFAULT_PRICE);
     });
-    
-    
+        
     it('set default price', async function () {
-        await this.collectible.setDefaultPrice(200);
+        await this.collectible.setDefaultPrice(200, { from: creator });
         
         const defaultPrice = await this.collectible.defaultPrice();
         
         assert.equal(defaultPrice, 200);
+    });
+
+    it('only creator can set default price', async function () {
+        expectThrow(this.collectible.setDefaultPrice(200, { from: alice }));
+        
+        const defaultPrice = await this.collectible.defaultPrice();
+        
+        assert.equal(defaultPrice, DEFAULT_PRICE);
     });
     
     it('initial owner', async function () {

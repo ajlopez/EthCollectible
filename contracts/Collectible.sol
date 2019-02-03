@@ -83,6 +83,7 @@ contract Collectible {
     }
     
     function getPricesInRange(uint from, uint to) public view returns (uint[] priceList) {
+        require(to >= from);
         uint size = to - from + 1;
         priceList = new uint[](size);
         
@@ -98,6 +99,7 @@ contract Collectible {
     }
     
     function getOwnersInRange(uint from, uint to) public view returns (address[] ownerList) {
+        require(to >= from);
         uint size = to - from + 1;
         ownerList = new address[](size);
         

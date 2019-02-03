@@ -156,6 +156,15 @@ contract('Collectible', function (accounts) {
         assert.equal(result[8], 5000);
     });
 
+    it('get prices invalid range', async function () {
+        await this.collectible.sell(42, 2000);
+        await this.collectible.sell(1, 3000);
+        await this.collectible.sell(4, 4000);
+        await this.collectible.sell(9, 5000);
+        
+        expectThrow(this.collectible.getPricesInRange(10, 1));
+    });
+
     it('get owners', async function () {
         await this.collectible.acquire(42, { from: alice });
         await this.collectible.acquire(1, { from: bob });
@@ -191,6 +200,15 @@ contract('Collectible', function (accounts) {
         assert.equal(result[8], dan);
     });
     
+    it('get owners invalid range', async function () {
+        await this.collectible.sell(42, 2000);
+        await this.collectible.sell(1, 3000);
+        await this.collectible.sell(4, 4000);
+        await this.collectible.sell(9, 5000);
+        
+        expectThrow(this.collectible.getOwnersInRange(10, 1));
+    });
+
     it('emit collectibles', async function () {
         await this.collectible.emit(1000, { from: creator });
         

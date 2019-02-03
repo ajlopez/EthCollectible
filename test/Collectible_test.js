@@ -157,6 +157,23 @@ contract('Collectible', function (accounts) {
         assert.equal(result[42], alice);
     });
     
+    it('get owners in range', async function () {
+        await this.collectible.acquire(42, { from: alice });
+        await this.collectible.acquire(1, { from: bob });
+        await this.collectible.acquire(4, { from: charlie });
+        await this.collectible.acquire(9, { from: dan });
+        
+        const result = await this.collectible.getOwnersInRange(1, 10);
+        
+        assert.ok(result);
+        assert.ok(Array.isArray(result));
+        assert.equal(result.length, 10);
+        
+        assert.equal(result[0], bob);
+        assert.equal(result[3], charlie);
+        assert.equal(result[8], dan);
+    });
+    
     it('emit collectibles', async function () {
         await this.collectible.emit(1000, { from: creator });
         

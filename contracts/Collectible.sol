@@ -89,11 +89,16 @@ contract Collectible {
     }
     
     function getOwners() public view returns (address[] ownerList) {
-        ownerList = new address[](noCollectibles);
+        return getOwnersInRange(0, noCollectibles - 1);
+    }
+    
+    function getOwnersInRange(uint from, uint to) public view returns (address[] ownerList) {
+        uint size = to - from + 1;
+        ownerList = new address[](size);
         
-        for (uint k = 0; k < noCollectibles; k++)
-            if (owners[k] != address(0))
-                ownerList[k] = owners[k];
+        for (uint k = 0; k < size; k++)
+            if (owners[k + from] != address(0))
+                ownerList[k] = owners[k + from];
 
         return ownerList;
     }

@@ -79,11 +79,16 @@ contract Collectible {
     }
     
     function getPrices() public view returns (uint[] priceList) {
-        priceList = new uint[](noCollectibles);
+        return getPricesInRange(0, noCollectibles - 1);
+    }
+    
+    function getPricesInRange(uint from, uint to) public view returns (uint[] priceList) {
+        uint size = to - from + 1;
+        priceList = new uint[](size);
         
-        for (uint k = 0; k < noCollectibles; k++)
-            if (prices[k] > 0)
-                priceList[k] = prices[k];
+        for (uint k = 0; k < size; k++)
+            if (prices[k + from] > 0)
+                priceList[k] = prices[k + from];
 
         return priceList;
     }

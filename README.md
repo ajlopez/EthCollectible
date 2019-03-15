@@ -12,6 +12,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [Purrrple Paper](https://lumiwallet.com/lumi_collect_purrrple_paper.pdf)
 - [How to Code Your Own CryptoKitties-Style Game on Ethereum](https://medium.com/loom-network/how-to-code-your-own-cryptokitties-style-game-on-ethereum-7c8ac86a4eb3)
 - [ERC: Crypto Item Standard #1155](https://github.com/ethereum/EIPs/issues/1155)
+- [ERC-1155: The Crypto Item Standard](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226)
 - [Blockchain Startup Enjin to Release Dev Kit for Game Engine Giant Unity](https://cointelegraph.com/news/blockchain-startup-enjin-to-release-dev-kit-for-game-engine-giant-unity)
 - [DarkWinds, blockchain card game](https://playdarkwinds.com/)
 

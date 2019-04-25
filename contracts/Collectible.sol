@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity >=0.4.21 <0.6.0;
 
 contract Collectible {
     address public owner;
@@ -8,7 +8,7 @@ contract Collectible {
     
     uint noCollectibles;
     
-    mapping(uint => address) owners;
+    mapping(uint => address payable) owners;
     
     constructor(uint _totalSupply, uint _defaultPrice) public {
         noCollectibles = _totalSupply;
@@ -34,7 +34,7 @@ contract Collectible {
         defaultPrice = _price;
     }
     
-    function emit(uint _quantity) public onlyOwner {
+    function create(uint _quantity) public onlyOwner {
         noCollectibles += _quantity;
     }
     
@@ -60,7 +60,7 @@ contract Collectible {
     function buy(uint tokenId_) public payable returns (bool) {
         require(prices[tokenId_] <= msg.value);
         
-        address originalOwner = owners[tokenId_];
+        address payable originalOwner = owners[tokenId_];
         
         owners[tokenId_] = msg.sender;
         prices[tokenId_] = 2 * msg.value;
@@ -78,11 +78,11 @@ contract Collectible {
         return true;
     }
     
-    function getPrices() public view returns (uint[] priceList) {
+    function getPrices() public view returns (uint[] memory priceList) {
         return getPricesInRange(0, noCollectibles - 1);
     }
     
-    function getPricesInRange(uint from, uint to) public view returns (uint[] priceList) {
+    function getPricesInRange(uint from, uint to) public view returns (uint[] memory priceList) {
         require(to >= from);
         uint size = to - from + 1;
         priceList = new uint[](size);
@@ -94,11 +94,11 @@ contract Collectible {
         return priceList;
     }
     
-    function getOwners() public view returns (address[] ownerList) {
+    function getOwners() public view returns (address[] memory ownerList) {
         return getOwnersInRange(0, noCollectibles - 1);
     }
     
-    function getOwnersInRange(uint from, uint to) public view returns (address[] ownerList) {
+    function getOwnersInRange(uint from, uint to) public view returns (address[] memory ownerList) {
         require(to >= from);
         uint size = to - from + 1;
         ownerList = new address[](size);

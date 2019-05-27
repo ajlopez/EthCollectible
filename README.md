@@ -18,6 +18,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [Muttniks: An open source dapp to show you how we built Astro Ledger](https://hackernoon.com/muttniks-an-open-source-dapp-to-show-you-how-we-built-astro-ledger-8a063b788d0b)
 - [NFTY #19: The State of Investing in NFTs](https://medium.com/nfty-news/nfty-19-the-state-of-investing-in-nfts-b45eb47ad70c)
 - [What Are Non-Fungible Tokens?](https://medium.com/cryptosuss/what-are-non-fungible-tokens-unique-digital-assets-on-the-blockchain-e68cc9efce5)
+- [Tokenization Without Tokens](https://hackernoon.com/implementing-asset-ownership-without-tokens-1d5ae0238590)
 
 ## License
 

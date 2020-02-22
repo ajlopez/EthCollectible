@@ -19,6 +19,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [NFTY #19: The State of Investing in NFTs](https://medium.com/nfty-news/nfty-19-the-state-of-investing-in-nfts-b45eb47ad70c)
 - [What Are Non-Fungible Tokens?](https://medium.com/cryptosuss/what-are-non-fungible-tokens-unique-digital-assets-on-the-blockchain-e68cc9efce5)
 - [Tokenization Without Tokens](https://hackernoon.com/implementing-asset-ownership-without-tokens-1d5ae0238590)
+- [The Non-Fungible Token Bible: Everything you need to know about NFTs](https://opensea.io/blog/guides/non-fungible-tokens/)
 
 ## License
 

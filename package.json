@@ -1,0 +1,21 @@
+{
+  "name": "EthCollectible",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Ethereum RSK Collectible",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test",
+    "compile": "truffle compile"
+  },
+  "keywords": [
+    "ethereum",
+    "rsk",
+    "solidity"
+  ],
+  "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)",
+  "license": "MIT",
+  "dependencies": {
+    "truffle": "5.1.14"
+  }
+}

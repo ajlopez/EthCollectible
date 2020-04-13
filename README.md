@@ -21,6 +21,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [Tokenization Without Tokens](https://hackernoon.com/implementing-asset-ownership-without-tokens-1d5ae0238590)
 - [The Non-Fungible Token Bible: Everything you need to know about NFTs](https://opensea.io/blog/guides/non-fungible-tokens/)
 - [Business NFTs — Financial Business Documents As Tokens On Decentralized Networks](https://medium.com/centrifuge/introducing-business-nfts-financial-business-documents-as-tokens-on-decentralized-networks-ec4b773f7ec59)
+- [Who Is Responsible for NFT Data?](https://medium.com/pinata/who-is-responsible-for-nft-data-99fb4e8147e4)
 
 ## License
 

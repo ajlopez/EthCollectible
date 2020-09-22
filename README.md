@@ -23,6 +23,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [Business NFTs — Financial Business Documents As Tokens On Decentralized Networks](https://medium.com/centrifuge/introducing-business-nfts-financial-business-documents-as-tokens-on-decentralized-networks-ec4b773f7ec59)
 - [Who Is Responsible for NFT Data?](https://medium.com/pinata/who-is-responsible-for-nft-data-99fb4e8147e4)
 - [NFTs Are Boring; Here’s How to Make Them Fun](https://www.coindesk.com/nfts-boring-make-fun)
+- [The NFT Game That Makes Cents for Filipinos During COVID](https://www.coindesk.com/nft-game-filipinos-covid)
 
 ## License
 

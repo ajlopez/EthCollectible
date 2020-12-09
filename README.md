@@ -25,6 +25,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [NFTs Are Boring; Here’s How to Make Them Fun](https://www.coindesk.com/nfts-boring-make-fun)
 - [The NFT Game That Makes Cents for Filipinos During COVID](https://www.coindesk.com/nft-game-filipinos-covid)
 - [The One Thing Missing from the ERC 721 Standard for Digital Collectibles on the Blockchain](https://medium.com/hackernoon/the-one-thing-missing-from-erc-721-standard-for-digital-collectibles-on-the-blockchain-9ee26e4a918c)
+- [How to Make a Pokemon-Like Game With ERC-721 Tokens](https://medium.com/better-programming/how-to-make-a-pok%C3%A9mon-like-game-with-erc-721-tokens-704f2344626)
 
 ## License
 

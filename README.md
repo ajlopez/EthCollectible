@@ -28,7 +28,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [How to Make a Pokemon-Like Game With ERC-721 Tokens](https://medium.com/better-programming/how-to-make-a-pok%C3%A9mon-like-game-with-erc-721-tokens-704f2344626)
 - [Rarible: Create, sell or collect digital items secured with blockchain](https://rarible.com/)
 - [Maecenas: Art investment blockchain-based platform](https://www.maecenas.co/)
-
+- [NFT Projects of The Day: Rarible Vs. Falcon Vs. Async Vs. ADOR Vs. SuperRare Vs. CryptoPunks](https://hackernoon.com/nft-projects-of-the-day-rarible-vs-falcon-vs-async-vs-ador-vs-superrare-vs-cryptopunks-ss3l33e7)
 
 ## License
 

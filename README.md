@@ -31,6 +31,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [NFT Projects of The Day: Rarible Vs. Falcon Vs. Async Vs. ADOR Vs. SuperRare Vs. CryptoPunks](https://hackernoon.com/nft-projects-of-the-day-rarible-vs-falcon-vs-async-vs-ador-vs-superrare-vs-cryptopunks-ss3l33e7)
 - [Crypto tokens will bridge the gap between AR and reality](https://www.wired.co.uk/article/crypto-tokens)
 - [Christie’s auctions its first purely digital artwork in form of blockchain token](https://cointelegraph.com/news/christie-s-auctions-its-first-purely-digital-artwork-in-form-of-blockchain-token)
+- [Beeple NFT to Be Auctioned by Christie’s](https://www.coindesk.com/beeple-nft-to-be-auctioned-by-christies)
 
 
 ## License

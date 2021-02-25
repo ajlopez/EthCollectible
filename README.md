@@ -32,7 +32,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [Crypto tokens will bridge the gap between AR and reality](https://www.wired.co.uk/article/crypto-tokens)
 - [Christie’s auctions its first purely digital artwork in form of blockchain token](https://cointelegraph.com/news/christie-s-auctions-its-first-purely-digital-artwork-in-form-of-blockchain-token)
 - [Beeple NFT to Be Auctioned by Christie’s](https://www.coindesk.com/beeple-nft-to-be-auctioned-by-christies)
-
+- [How to use RNS domains with non-fungible token standards? (such as ERC721)](https://stackoverflow.com/questions/65622958/how-to-use-rns-domains-with-non-fungible-token-standards-such-as-erc721/65622959#65622959)
 
 ## License
 

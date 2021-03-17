@@ -37,6 +37,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [Watch Beeple React to the Historic $69.3m Sale of His Digital Work at Christie's](https://www.youtube.com/watch?v=S8p1B8NHLFQ)
 - [OpenSea](https://opensea.io/)
 - [nftfi NFT as collateral](https://nftfi.com/)
+- [NFTs and Crypto Art: The Sky is not Falling](https://sterlingcrispin.blogspot.com/2021/02/crypto-art-sky-is-not-falling.html)
 
 ## License
 

@@ -38,6 +38,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [OpenSea](https://opensea.io/)
 - [nftfi NFT as collateral](https://nftfi.com/)
 - [NFTs and Crypto Art: The Sky is not Falling](https://sterlingcrispin.blogspot.com/2021/02/crypto-art-sky-is-not-falling.html)
+- [NFTs Might Be What 2021’s Recovering Art Market Needs](https://observer.com/2021/03/nft-art-basel-global-sales-drop-recession/)
 
 ## License
 

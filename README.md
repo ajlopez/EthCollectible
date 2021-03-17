@@ -35,6 +35,8 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [How to use RNS domains with non-fungible token standards? (such as ERC721)](https://stackoverflow.com/questions/65622958/how-to-use-rns-domains-with-non-fungible-token-standards-such-as-erc721/65622959#65622959)
 - [Bilinkis sobre NFTs](https://twitter.com/bilinkis/status/1370160125084831745)
 - [Watch Beeple React to the Historic $69.3m Sale of His Digital Work at Christie's](https://www.youtube.com/watch?v=S8p1B8NHLFQ)
+- [OpenSea](https://opensea.io/)
+- [nftfi NFT as collateral](https://nftfi.com/)
 
 ## License
 

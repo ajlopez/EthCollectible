@@ -41,6 +41,13 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [NFTs Might Be What 2021’s Recovering Art Market Needs](https://observer.com/2021/03/nft-art-basel-global-sales-drop-recession/)
 - [Los NFT están disponibles para el trading en Uniswap (UNI)](https://es.beincrypto.com/nft-estan-disponibles-para-trading-uniswap-uni/)
 - [On Covering the NFT Hype](https://www.coindesk.com/covering-nft-hype)
+- [How To Create NFTs With Solidity](https://betterprogramming.pub/how-to-create-nfts-with-solidity-4fa1398eb70a)
+- [CryptoKitties in OpenSea](https://opensea.io/assets/cryptokitties)
+- [Developer analysis of MoonCat contract](https://www.reddit.com/r/MoonCatRescue/comments/6tkdl0/developer_analysis_of_mooncat_contract/)
+- [Bots Are Ruining MoonCats, One Of Ethereum’s Oldest NFT Projects](https://decrypt.co/62231/bots-are-ruining-mooncats-one-of-ethereums-oldest-nft-projects)
+- [MoonCatRescue Smart Contract](https://etherscan.io/address/0x60cd862c9c687a9de49aecdc3a99b74a4fc54ab6#code)
+- [MoonCat tools](https://github.com/bokkypoobah/MoonCatTools)
+- [MoonCat images](https://github.com/cryptocopycats/mooncats)
 
 ## License
 

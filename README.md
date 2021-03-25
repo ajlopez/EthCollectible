@@ -48,6 +48,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [MoonCatRescue Smart Contract](https://etherscan.io/address/0x60cd862c9c687a9de49aecdc3a99b74a4fc54ab6#code)
 - [MoonCat tools](https://github.com/bokkypoobah/MoonCatTools)
 - [MoonCat images](https://github.com/cryptocopycats/mooncats)
+- [Introducing NFT Flash Loans](https://medium.com/nft20/introducing-nft-flash-loans-97ff8c9298d4)
 
 ## License
 

@@ -50,6 +50,7 @@ Ethereum/RSK Collectible implementation, as non-fungible token with auctions, WI
 - [MoonCat images](https://github.com/cryptocopycats/mooncats)
 - [Introducing NFT Flash Loans](https://medium.com/nft20/introducing-nft-flash-loans-97ff8c9298d4)
 - [What is an NFT](https://blog.chain.link/what-is-an-nft/)
+- [The Smart NFT](https://medium.com/phantasticphantasma/the-smart-nft-3a1ff1c03328)
 
 ## License
 
